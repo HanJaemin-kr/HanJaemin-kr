@@ -28,10 +28,11 @@
   <br>
 </div>
 
-# 📬 : Contacts & Blog
-[![Tech Blog Badge](https://img.shields.it/badge/-Tech%20blog-black?style=flat-square&logo=github&link=https://hello-jaemin.tistory.com/)
+<h2> 📬 : Contacts & Blog </h2>
+[![Tech Blog Badge](https://img.shields.it/badge/-Tech%20blog-black?style=flat-square&logo=github&link=https://hello-jaemin.tistory.com/)](https://hello-jaemin.tistory.com/)
+
 [![Gmail Badge](https://img.shields.io/badge/Gmail-d14836?style=flat-square&logo=Gmail&logoColor=white&link=mailto:dudrn1947@gmail.com)](mailto:dudrn1947@gamil.com)
-[![Naver Badge](https://img.shields.io/badge/Naver-03C75A?style=flat-square&logo=Naver&logoColor=white&link=mailto:dudrn1947@naver.com)(mailto:dudrn1947@naver.com)
+[![Naver Badge](https://img.shields.io/badge/Naver-03C75A?style=flat-square&logo=Naver&logoColor=white&link=mailto:dudrn1947@naver.com)](mailto:dudrn1947@naver.com)
 
 <!--
 **HanJaemin-kr/HanJaemin-kr** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
