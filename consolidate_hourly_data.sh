@@ -11,11 +11,14 @@
 #   ./consolidate_hourly_data.sh /data "1구간 (롯데정밀화학)" --dry-run  # 특정 폴더
 #   ./consolidate_hourly_data.sh /data list                 # 폴더 목록만 보기
 #
+# 백업 폴더 구조:
+#   기본경로/backup/폴더이름/파일들
+#
 
 BASE_DIR="$1"
 FOLDER_SELECT="$2"
 DRY_RUN=false
-MOVE_DIR="hourly_backup"
+BACKUP_BASE="backup"
 
 # dry-run 체크
 if [ "$3" == "--dry-run" ] || [ "$2" == "--dry-run" ]; then
@@ -32,6 +35,9 @@ if [ -z "$BASE_DIR" ]; then
     echo "  $0 /data all --dry-run                  # 모든 폴더 시뮬레이션"
     echo "  $0 /data all                            # 모든 폴더 실제 실행"
     echo "  $0 /data \"1구간 (롯데정밀화학)\" --dry-run  # 특정 폴더 시뮬레이션"
+    echo ""
+    echo "백업 폴더 구조:"
+    echo "  기본경로/backup/폴더이름/파일들"
     echo ""
     exit 1
 fi
@@ -78,11 +84,14 @@ else
     fi
 fi
 
+BACKUP_ROOT="$BASE_DIR/$BACKUP_BASE"
+
 echo ""
 echo "============================================================"
 echo "데이터 파일 정리 스크립트"
 echo "============================================================"
 echo "기본 경로: $BASE_DIR"
+echo "백업 경로: $BACKUP_ROOT"
 echo "처리할 폴더 수: ${#FOLDERS_TO_PROCESS[@]}"
 if [ "$DRY_RUN" = true ]; then
     echo "모드: DRY RUN (시뮬레이션)"
@@ -91,11 +100,17 @@ else
 fi
 echo "============================================================"
 
+# 백업 루트 폴더 생성
+if [ "$DRY_RUN" = false ] && [ ! -d "$BACKUP_ROOT" ]; then
+    mkdir -p "$BACKUP_ROOT"
+    echo "백업 루트 폴더 생성: $BACKUP_ROOT"
+fi
+
 # 폴더별 처리 함수
 process_folder() {
     local DATA_DIR="$1"
     local FOLDER_NAME="$2"
-    local BACKUP_DIR="$DATA_DIR/$MOVE_DIR"
+    local BACKUP_DIR="$BACKUP_ROOT/$FOLDER_NAME"
     
     local folder_kept=0
     local folder_moved=0
@@ -104,11 +119,14 @@ process_folder() {
     echo "############################################################"
     echo "# 처리 중: $FOLDER_NAME"
     echo "############################################################"
+    echo "# 원본: $DATA_DIR"
+    echo "# 백업: $BACKUP_DIR"
+    echo "############################################################"
     
-    # 이동 폴더 생성
+    # 백업 폴더 생성
     if [ "$DRY_RUN" = false ] && [ ! -d "$BACKUP_DIR" ]; then
         mkdir -p "$BACKUP_DIR"
-        echo "이동 폴더 생성: $BACKUP_DIR"
+        echo "백업 폴더 생성: $BACKUP_DIR"
     fi
     
     # AE_.dat 파일 처리
@@ -231,7 +249,7 @@ if [ "$DRY_RUN" = true ]; then
     echo "  ※ 실제 실행하려면 --dry-run 옵션을 제거하세요."
 else
     echo ""
-    echo "  ※ 이동된 파일들은 각 폴더의 '$MOVE_DIR' 하위 폴더에 있습니다."
+    echo "  ※ 이동된 파일들은 '$BACKUP_ROOT/폴더이름/' 에 있습니다."
 fi
 echo "============================================================"
 echo ""
