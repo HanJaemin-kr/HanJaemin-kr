@@ -156,7 +156,11 @@ def main():
             
             if not args.dry_run:
                 dest_path = os.path.join(move_dir, filename)
-                shutil.move(filepath, dest_path)
+                try:
+                    shutil.move(filepath, dest_path)
+                except (IOError, OSError, shutil.Error) as e:
+                    print(f"    ⚠ 오류 발생: {filename} 이동 실패 - {e}")
+                    continue
             
             total_moved += 1
             total_moved_size += size
