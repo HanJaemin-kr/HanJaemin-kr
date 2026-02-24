@@ -4,6 +4,7 @@
 특정 도메인에 머무르기보다 **어디서든 확장 가능한 구조와 코드**를 만드는 데 관심이 많습니다.
 
 Portfolio: https://jaemin-portfolio-9x60dy1yg-hanjaemin-krs-projects.vercel.app
+Dev-Blog: https://hello-jaemin.tistory.com
 
 ---
 
