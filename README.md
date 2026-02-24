@@ -1,11 +1,11 @@
-# 👋 안녕하세요, 풀스택 개발자입니다
+#  안녕하세요, 발전하는 개발자 한재민입니다.
 
 문제를 구조화하고, 데이터를 서비스로 연결하는 개발자입니다.
 특정 도메인에 머무르기보다 **어디서든 확장 가능한 구조와 코드**를 만드는 데 관심이 많습니다.
 
 ---
 
-## 🧩 Tech Stack
+## Tech Stack
 
 * **Frontend**: Vue 3, TypeScript, SciChart
 * **Backend**: NestJS, REST API, WebSocket
@@ -15,7 +15,7 @@
 
 ---
 
-## 📌hat I Build
+## hat I Build
 
 * 실시간 데이터 시각화 대시보드
 * 데이터 기반 웹 서비스
@@ -25,7 +25,7 @@
 
 ---
 
-## 🧠 Experience & Interest
+## Experience & Interest
 
 * 산업 데이터, 센서 데이터 처리 경험
 * 복잡한 도메인을 단순한 시스템으로 설계
@@ -33,7 +33,7 @@
 
 ---
 
-## 🎯 Focus
+## Focus
 
 * 실서비스 중심 개발
 * 유지보수 가능한 구조
