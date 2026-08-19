@@ -1,6 +1,6 @@
 <div align="center">
 
-<img width="100%" src="https://raw.githubusercontent.com/HanJaemin-kr/HanJaemin-kr/main/assets/header.svg" alt="Jaemin Han — Backend · Data · AI Developer" />
+<img width="100%" src="https://cdn.jsdelivr.net/gh/HanJaemin-kr/HanJaemin-kr@main/assets/header.svg" alt="Jaemin Han — Backend · Data · AI Developer" />
 
 <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=24&pause=1000&color=22C55E&center=true&vCenter=true&width=640&lines=%eb%b0%b1%ec%97%94%eb%93%9c+%c2%b7+%eb%8d%b0%ec%9d%b4%ed%84%b0+%c2%b7+AI+%ea%b0%9c%eb%b0%9c%ec%9e%90;%ec%84%bc%ec%84%9c+%ec%8b%a0%ed%98%b8%eb%a5%bc+%ed%98%84%ec%9e%a5+%ec%8b%9c%ec%8a%a4%ed%85%9c%ea%b9%8c%ec%a7%80;Platform+%c2%b7+Signal+Processing+%c2%b7+GenAI" alt="typing" />
 
@@ -214,7 +214,7 @@ education: "M.S. in EECS, University of Ulsan (GPA 4.19 / 4.5)"
 
 </div>
 
-<img width="100%" src="https://raw.githubusercontent.com/HanJaemin-kr/HanJaemin-kr/main/assets/footer.svg" alt="footer" />
+<img width="100%" src="https://cdn.jsdelivr.net/gh/HanJaemin-kr/HanJaemin-kr@main/assets/footer.svg" alt="footer" />
 
 <div align="center">
 <sub>센서 신호 한 줄에서 시작해 현장에서 돌아가는 시스템까지 — 끝까지 책임지는 개발자가 되겠습니다.</sub>
