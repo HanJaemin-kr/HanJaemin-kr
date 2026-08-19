@@ -206,11 +206,11 @@ education: "M.S. in EECS, University of Ulsan (GPA 4.19 / 4.5)"
 
 <img width="100%" src="https://capsule-render.vercel.app/api?type=rect&color=0:22C55E,100:065F46&height=2" />
 
-## 08. GitHub Stats
+## 08. Impact Highlights
 
 <div align="center">
 
-<img src="https://streak-stats.demolab.com/?user=HanJaemin-kr&hide_border=true&background=0d1117&ring=22C55E&fire=22C55E&currStreakLabel=22C55E&stroke=c9d1d9&sideLabels=c9d1d9&dates=8b949e" />
+<img width="100%" src="https://cdn.jsdelivr.net/gh/HanJaemin-kr/HanJaemin-kr@main/assets/stats.svg" alt="Impact Highlights — 6 field sites · 392 machines / 936 sensors · 203x faster aggregation · 98.29% cache hit · 98%+ AI anomaly detection · 3 national R&D + 3 industry PoC" />
 
 </div>
 

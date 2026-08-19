@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 900 300" width="900" height="300" role="img" aria-label="Impact Highlights — Jaemin Han">
+  <defs>
+    <linearGradient id="ring" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#22C55E"/>
+      <stop offset="100%" stop-color="#065F46"/>
+    </linearGradient>
+    <g id="g">
+      <g fill="currentColor">
+        <rect x="-5" y="-49" width="10" height="15" rx="2"/>
+        <rect x="-5" y="-49" width="10" height="15" rx="2" transform="rotate(30)"/>
+        <rect x="-5" y="-49" width="10" height="15" rx="2" transform="rotate(60)"/>
+        <rect x="-5" y="-49" width="10" height="15" rx="2" transform="rotate(90)"/>
+        <rect x="-5" y="-49" width="10" height="15" rx="2" transform="rotate(120)"/>
+        <rect x="-5" y="-49" width="10" height="15" rx="2" transform="rotate(150)"/>
+        <rect x="-5" y="-49" width="10" height="15" rx="2" transform="rotate(180)"/>
+        <rect x="-5" y="-49" width="10" height="15" rx="2" transform="rotate(210)"/>
+        <rect x="-5" y="-49" width="10" height="15" rx="2" transform="rotate(240)"/>
+        <rect x="-5" y="-49" width="10" height="15" rx="2" transform="rotate(270)"/>
+        <rect x="-5" y="-49" width="10" height="15" rx="2" transform="rotate(300)"/>
+        <rect x="-5" y="-49" width="10" height="15" rx="2" transform="rotate(330)"/>
+        <circle r="36"/>
+      </g>
+      <circle r="12" fill="#0d1117"/>
+    </g>
+  </defs>
+
+  <rect x="1" y="1" width="898" height="298" rx="16" fill="#0d1117" stroke="url(#ring)" stroke-width="2"/>
+
+  <!-- decorative gears -->
+  <g transform="translate(70,238) scale(1.35)" color="#22C55E" opacity="0.12">
+    <g><use xlink:href="#g"/><animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="16s" repeatCount="indefinite"/></g>
+  </g>
+  <g transform="translate(838,64) scale(1.15)" color="#22C55E" opacity="0.12">
+    <g><use xlink:href="#g"/><animateTransform attributeName="transform" type="rotate" from="360" to="0" dur="13s" repeatCount="indefinite"/></g>
+  </g>
+
+  <!-- title -->
+  <text x="450" y="52" text-anchor="middle" font-family="'Segoe UI',Helvetica,Arial,sans-serif" font-size="20" font-weight="800" fill="#22C55E" letter-spacing="6">IMPACT HIGHLIGHTS</text>
+  <rect x="330" y="66" width="240" height="2" rx="1" fill="url(#ring)"/>
+
+  <!-- row 1 -->
+  <g font-family="'Segoe UI',Helvetica,Arial,sans-serif" text-anchor="middle">
+    <text x="180" y="150" font-size="46" font-weight="800" fill="#ffffff">6</text>
+    <text x="180" y="176" font-size="13.5" fill="#8b949e">Field Sites · Built &amp; Operated</text>
+
+    <text x="450" y="150" font-size="46" font-weight="800" fill="#ffffff">392<tspan fill="#22C55E"> / </tspan>936</text>
+    <text x="450" y="176" font-size="13.5" fill="#8b949e">Machines / Sensors</text>
+
+    <text x="720" y="150" font-size="46" font-weight="800" fill="#22C55E">203<tspan fill="#ffffff" font-size="30">×</tspan></text>
+    <text x="720" y="176" font-size="13.5" fill="#8b949e">Faster Aggregation (13.4s → 66ms)</text>
+  </g>
+
+  <!-- row 2 -->
+  <g font-family="'Segoe UI',Helvetica,Arial,sans-serif" text-anchor="middle">
+    <text x="180" y="240" font-size="46" font-weight="800" fill="#22C55E">98.29%</text>
+    <text x="180" y="266" font-size="13.5" fill="#8b949e">Cache Hit Rate</text>
+
+    <text x="450" y="240" font-size="46" font-weight="800" fill="#22C55E">98%+</text>
+    <text x="450" y="266" font-size="13.5" fill="#8b949e">AI Anomaly Detection</text>
+
+    <text x="720" y="240" font-size="46" font-weight="800" fill="#ffffff">3<tspan fill="#22C55E"> + </tspan>3</text>
+    <text x="720" y="266" font-size="13.5" fill="#8b949e">National R&amp;D / Industry PoC</text>
+  </g>
+</svg>
