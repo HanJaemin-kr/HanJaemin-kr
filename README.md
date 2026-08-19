@@ -23,14 +23,14 @@
 
 > 센서 신호 한 줄에서 시작해 **현장에서 실제로 돌아가는 시스템**까지 잇는 백엔드·데이터·AI 개발자입니다. 실시간 데이터 플랫폼부터 신호처리, 온프레미스 GenAI까지 폭넓게 다뤄 왔습니다.
 
-㈜예측진단기술 선임연구원입니다. 울산대 산업 인공지능 연구실(지도교수 김종면)에서 시작한 연구를 `수집 서버 → API → DB → 운영 화면 → 알람 → AI 진단`을 잇는 플랫폼으로 제품화하고, **국책 3건 · 기업 납품 3건, 6개 현장을 직접 구축·운영**하며 데이터 플랫폼·신호처리·AI 진단·온프레미스 LLM까지 여러 영역을 맡아 왔습니다.
+㈜예측진단기술 선임연구원입니다. 울산대 산업 인공지능 연구실(지도교수 김종면)에서 시작한 연구를 `수집 서버 → API → DB → 운영 화면 → 알람 → AI 진단`을 잇는 멀티테넌트 플랫폼(일 약 **310만 건** 센서 레코드)으로 제품화하고, **국책 3건 · 기업 실증 3건, 6개 현장을 직접 구축·운영**하며 데이터 플랫폼·신호처리·AI 진단·온프레미스 LLM까지 여러 영역을 맡아 왔습니다.
 
 **이런 경험이 있습니다**
 
-- 🔹 **실시간 데이터 플랫폼을 처음부터 끝까지 구축·운영** — `NestJS · Vue · InfluxDB · Docker`로 수집·API·DB·대시보드·알람을 잇고, 6개 현장을 무중단 운영
-- 🔹 **신호처리·이상예지 AI를 연구하고 제품에 적용** — `FFT · STFT · 회전성분 압축`과 `1D-CNN · TabNet · XAI`로 결함을 진단하고 공개 데이터셋으로 일반화 검증
+- 🔹 **실시간 데이터 플랫폼을 처음부터 끝까지 구축·운영** — `NestJS · Vue · InfluxDB · MySQL · Redis · Docker`로 수집·API·3계층 DB·대시보드·알람을 잇고, 6개 현장을 무중단 운영
+- 🔹 **신호처리·이상예지 AI를 연구하고 제품에 적용** — `FFT · STFT · 회전성분 압축`과 `1D-CNN · TabNet · 2D 스펙트로그램 CNN · XAI`로 결함을 진단하고 공개 데이터셋으로 일반화 검증
 - 🔹 **온프레미스 GenAI(RAG·Agent)를 직접 구축** — 외부 API 없이 사내 GPU에서 도는 유지보수 전문가 AI, 하이브리드 검색·Tool Calling
-- 🔹 **다양한 산업·과제를 요구사항부터 운영까지 수행** — 제조·화학·선박·발전, 국책·기업 과제를 협력사와 협업하며 전 구간 담당
+- 🔹 **다양한 산업·과제를 요구사항부터 운영까지 수행** — 제조·화학·선박·유틸리티, 국책·기업 과제를 협력사와 협업하며 전 구간 담당
 
 ```yaml
 name:      "한재민 (Jaemin Han)"
@@ -55,7 +55,6 @@ education: "M.S. in EECS, University of Ulsan (GPA 4.19 / 4.5)"
 
 <img src="https://skillicons.dev/icons?i=mysql,redis,sqlite,docker,nginx,linux,githubactions&theme=dark" alt="data-devops" />
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/influxdb/influxdb-original.svg" height="48" alt="InfluxDB" />
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mariadb/mariadb-original.svg" height="48" alt="MariaDB" />
 
 **AI · Signal Processing**
 
@@ -67,7 +66,7 @@ education: "M.S. in EECS, University of Ulsan (GPA 4.19 / 4.5)"
 <img src="https://img.shields.io/badge/ECharts-AA344D?style=for-the-badge&logo=apacheecharts&logoColor=white" />
 <img src="https://img.shields.io/badge/SciChart-2E7D32?style=for-the-badge" />
 
-<sub><code>FFT</code> · <code>STFT</code> · <code>Spectrogram</code> · <code>회전성분 압축</code> · <code>DTW</code> · <code>1D-CNN</code> · <code>TabNet</code> · <code>XAI</code> · <code>Anomaly Detection</code> · <code>RAG</code></sub>
+<sub><code>FFT</code> · <code>STFT</code> · <code>2D Spectrogram</code> · <code>회전성분 압축</code> · <code>DTW</code> · <code>1D-CNN</code> · <code>TabNet</code> · <code>Decision Tree</code> · <code>XAI</code> · <code>Anomaly Detection</code> · <code>RAG</code></sub>
 
 </div>
 
@@ -76,13 +75,14 @@ education: "M.S. in EECS, University of Ulsan (GPA 4.19 / 4.5)"
 ## 03. Experience
 
 **㈜예측진단기술** · 선임연구원 / 제조 AI·데이터 플랫폼 개발 <sub>(SW 개발팀)</sub> &nbsp;`2025.03 ~ 현재`
-- 진동·AE·온도·가스·PLC 5종 설비 데이터를 REST/WebSocket API와 InfluxDB·MariaDB·Redis 3계층 DB를 거쳐 운영 화면·알람·AI 진단 이력으로 잇는 예지보전 플랫폼을 개발·운영
-- 저장소를 용도별 3계층으로 분리해 1년치 집계 조회를 `13.4s → 66ms (×203)`로 단축, 캐시 적중률 98.29% 확보
-- Docker·Nginx·CI/CD로 배포를 표준화해 신규 현장 구축을 `평균 2일 → 30분 (약 32배 단축)`으로 단축하고, 서버 이전·백업/복원·장애 복구를 무중단으로 수행
+- 진동·AE·온도·가스·PLC 5종 설비 데이터를 REST/WebSocket API와 `InfluxDB · MySQL 8.0 · Redis` 3계층 DB를 거쳐 운영 화면·알람·AI 진단으로 잇는 **멀티테넌트 예지보전 플랫폼(일 약 310만 건)**을 개발·운영
+- 저장소를 접근 패턴별 3계층으로 분리해 1년치 집계 조회를 `13.4s → 66ms (×203)`로 단축, 캐시 적중률 98.29% 확보
+- Docker·Nginx·CI/CD로 배포를 표준화해 신규 현장 구축을 `평균 2일 → 30분 (약 32배)`으로 단축하고, 서버 이전·백업/복원·DB 버전 업그레이드·장애 복구를 무중단으로 수행
+- 43개 도메인 모듈이 각각 등록하던 소켓 게이트웨이를 전역 단일 인스턴스로 통합(`43 → 1`)해 리스너 중복을 제거하고, AI 추론을 비동기 서빙으로 전환해 추론 중에도 조회·화면 응답을 유지
 
 **울산대학교 대학원 산업 인공지능 연구실** · 석사 연구원 <sub>(지도교수 김종면)</sub> &nbsp;`2023.03 ~ 2025.02`
 - 진동·AE·온도 센서 신호를 분석해 설비 결함을 진단·분류하는 딥러닝 연구 (`FFT · STFT · 회전성분 압축 → 1D-CNN · TabNet · XAI`)
-- 국책 3건·기업 납품 3건에 참여해 연구실의 신호처리·예지보전 연구를 실제 현장 제품 기능으로 고도화
+- 국책 3건·기업 실증 3건에 참여해 연구실의 신호처리·예지보전 연구를 실제 현장 제품 기능으로 고도화
 
 <img width="100%" src="https://capsule-render.vercel.app/api?type=rect&color=0:22C55E,100:065F46&height=2" />
 
@@ -95,13 +95,13 @@ education: "M.S. in EECS, University of Ulsan (GPA 4.19 / 4.5)"
 
 <br/>
 
-진동·AE·온도·가스·PLC 다종 설비 데이터를 수집 서버부터 API·DB·대시보드·알람·AI 진단까지 하나로 잇는 실시간 산업 모니터링 플랫폼. 제조·화학·선박·유틸리티·발전 5개 환경에 적용.
+진동·AE·온도·가스·PLC 다종 설비 데이터를 수집 서버부터 API·DB·대시보드·알람·AI 진단까지 하나로 잇는 실시간 산업 모니터링 플랫폼. 제조·화학·선박·유틸리티 현장에 온프레미스로 적용. 누적 **설비 392대·센서 936개**(현장 32개, 배관 관제 포함 총 센서 1,023개) 규모이며, 이 중 **직접 구축·운영한 현장은 6곳**, 일 약 **310만 건**을 처리.
 
-![](https://img.shields.io/badge/Sites-127-22C55E?style=flat-square) ![](https://img.shields.io/badge/Machines-592-22C55E?style=flat-square) ![](https://img.shields.io/badge/Aggregation-203x%20faster-16A34A?style=flat-square) ![](https://img.shields.io/badge/Cache%20Hit-98.29%25-16A34A?style=flat-square)
+![](https://img.shields.io/badge/Machines-392-22C55E?style=flat-square) ![](https://img.shields.io/badge/Sensors-936-22C55E?style=flat-square) ![](https://img.shields.io/badge/Aggregation-203x%20faster-16A34A?style=flat-square) ![](https://img.shields.io/badge/Cache%20Hit-98.29%25-16A34A?style=flat-square)
 
 - **역할** · 수집·분석·설계·운영 4계층 전 구간 (설계 → 구축 → 운영 → 유지보수) · 직접 구축·운영 6현장
-- **활용기술** · `NestJS` `Node.js` `TypeScript` `Vue` `WebSocket` `InfluxDB` `MariaDB` `Redis` `Docker` `Nginx`
-- **트러블슈팅** · 최근값=`Redis` / 시계열 원본=`InfluxDB`(Continuous Query 다운샘플링) / 메타=`MariaDB` 3계층 분리로 1년치 집계 조회 `13.4s → 66ms (×203)` · Docker Compose 표준화로 신규 구축 `2일 → 30분 (약 32배 단축)`, 전체 서비스 재시작 20s 이내
+- **활용기술** · `NestJS` `Node.js` `TypeScript` `Vue` `WebSocket` `InfluxDB` `MySQL 8.0` `Redis` `Docker` `Nginx`
+- **트러블슈팅** · 최근값=`Redis` / 시계열 원본=`InfluxDB`(Continuous Query 다운샘플링) / 메타=`MySQL 8.0` 3계층 분리로 1년치 집계 조회 `13.4s → 66ms (×203)` · 전 스택 9개 서비스를 Docker Compose로 표준화해 신규 구축 `2일 → 30분 (약 32배)`, 전체 서비스 재시작 20s 이내 · 소켓 게이트웨이 `43 → 1` 통합으로 리스너 중복 누적 제거
 
 </details>
 
@@ -116,7 +116,7 @@ education: "M.S. in EECS, University of Ulsan (GPA 4.19 / 4.5)"
 
 - **역할** · 관제 API·데이터 계층(배관/맨홀/포인트) 설계 · 연계 업체 간 데이터 규격 협의·표준화 · 바이너리·소켓 실시간 수집 프로토콜 설계
 - **활용기술** · `Node.js` `Socket` `Binary Protocol` `P-LTE` `InfluxDB` `Vue` `CI/CD`
-- **트러블슈팅** · REST/JSON → 고정폭 바이너리 + 소켓 전환으로 페이로드 `82% 압축 (×5.7)` · 전송 효율 `×10.5` · 일 대역폭 4.7GB 절감 · 센서 87개(진동 44·AE 43)·배관 25개(운영 11·진행 14), AE 누수 위치 추정 오차 평균 2.37%(최적 1.27%)
+- **트러블슈팅** · 외부 관제 API가 불안정해도 로컬 수집·저장을 우선 보장하도록 수집 경로 분리 · REST/JSON → 고정폭 바이너리 + 소켓 전환으로 페이로드 `82% 압축 (×5.7)` · 전송 효율 `×10.5` · 일 대역폭 4.7GB 절감 · 센서 87개(진동 44·AE 43)·배관 25개(운영 11·진행 14), AE 누수 위치 추정 오차 평균 2.37%(최적 1.27%)
 
 </details>
 
@@ -125,13 +125,13 @@ education: "M.S. in EECS, University of Ulsan (GPA 4.19 / 4.5)"
 
 <br/>
 
-공작기계·회전설비 진동 신호를 시간영역 → 주파수영역(FFT·STFT)으로 변환하고, 회전 성분(X order) 기반으로 유효 성분만 압축한 뒤 1D-CNN·TabNet·XAI로 결함을 분류하는 제조 AI 진단 파이프라인.
+공작기계·회전설비 진동 신호를 시간영역 → 주파수영역(FFT·STFT)으로 변환하고, 회전 성분(X order) 기반으로 유효 성분만 압축한 뒤 1D-CNN·TabNet·XAI로 결함을 분류하는 제조 AI 진단 파이프라인. 연구 파이프라인을 현장 제품으로 확장해, 공정별 2D 스펙트로그램 CNN으로 이상탐지 98% 이상(학습·검증 분리)을 탑재하고, 결함 데이터가 희소한 화학반응기는 의사결정트리 다중분류(92%) + 임계치·AI 이중 알람으로 운용.
 
-![](https://img.shields.io/badge/Compression-~22x-22C55E?style=flat-square) ![](https://img.shields.io/badge/TabNet-0.98-22C55E?style=flat-square) ![](https://img.shields.io/badge/Storage-87.5%25%20saved-16A34A?style=flat-square) ![](https://img.shields.io/badge/Field%20Catches-9-16A34A?style=flat-square)
+![](https://img.shields.io/badge/Compression-~22x-22C55E?style=flat-square) ![](https://img.shields.io/badge/TabNet-0.99-22C55E?style=flat-square) ![](https://img.shields.io/badge/Storage-87.5%25%20saved-16A34A?style=flat-square) ![](https://img.shields.io/badge/Field%20Catches-9-16A34A?style=flat-square)
 
 - **역할** · 진동 신호 취득·전처리 → 회전성분 압축 → 딥러닝 분류(정상·베어링·기어·공구) → XAI 판단 근거 · 연구 결과를 제품 진단 화면·보고서로 확장
-- **활용기술** · `Python` `PyTorch` `MATLAB` `FFT/STFT` `회전성분 신호압축` `1D-CNN` `TabNet` `SciChart`
-- **트러블슈팅** · 회전성분 압축으로 특징 `7000 → 100 구간 (73.4MB → 3.28MB, ~22x)`, TabNet 정확도 `0.93 → 0.98`·편차↓(5개 공개 데이터셋 일반화 검증) · 현장 스펙트로그램 저장 `87.5%↓ (3.77TB → 469.6GB)` · 실운용 중 불량 9건 감지(연삭기 4·MCT 5), 공구 수명 29%↑
+- **활용기술** · `Python` `PyTorch` `MATLAB` `FFT/STFT` `2D 스펙트로그램` `회전성분 신호압축` `1D-CNN` `TabNet` `의사결정트리` `SciChart`
+- **트러블슈팅** · 회전성분 압축으로 특징 `7000 → 100 구간 (73.4MB → 3.28MB, ~22x)`, TabNet 정확도 `0.93 → 0.99`·편차↓(5개 공개 데이터셋 일반화 검증) · 현장 스펙트로그램 저장 `87.5%↓ (3.77TB → 469.6GB)` · 실운용 중 불량 9건 감지(연삭기 4·MCT 5), 공구 수명 29%↑
 
 </details>
 
