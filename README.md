@@ -54,14 +54,20 @@ education: "M.S. in EECS, University of Ulsan (GPA 4.19 / 4.5)"
 
 현업에서 쓰는 도구(Grafana, InfluxDB 클라이언트, Industry 4.0 디지털 트윈 표준 AAS/BaSyx)의 버그와 기능을 직접 고쳐 업스트림에 기여하고 있습니다.
 
+<!-- OSS:START -->
+![PRs](https://img.shields.io/badge/PRs-6-22C55E?style=flat-square) ![Merged](https://img.shields.io/badge/Merged-2-16A34A?style=flat-square) ![Repos](https://img.shields.io/badge/Repos-3-065F46?style=flat-square)
+
 | Project | Pull Request | Status |
 |---|---|---|
-| [eclipse-basyx/basyx-aas-web-ui](https://github.com/eclipse-basyx/basyx-aas-web-ui) | [#1588](https://github.com/eclipse-basyx/basyx-aas-web-ui/pull/1588) Fix bank account deletion in Company Data Portal | <img src="https://img.shields.io/github/pulls/detail/state/eclipse-basyx/basyx-aas-web-ui/1588?label=&style=flat-square" alt="status" /> |
-| [eclipse-basyx/basyx-aas-web-ui](https://github.com/eclipse-basyx/basyx-aas-web-ui) | [#1589](https://github.com/eclipse-basyx/basyx-aas-web-ui/pull/1589) Improve guidance for BaSyx connection failures | <img src="https://img.shields.io/github/pulls/detail/state/eclipse-basyx/basyx-aas-web-ui/1589?label=&style=flat-square" alt="status" /> |
-| [eclipse-basyx/basyx-aas-web-ui](https://github.com/eclipse-basyx/basyx-aas-web-ui) | [#1590](https://github.com/eclipse-basyx/basyx-aas-web-ui/pull/1590) Prefer configured endpoint in multi-endpoint AAS descriptors | <img src="https://img.shields.io/github/pulls/detail/state/eclipse-basyx/basyx-aas-web-ui/1590?label=&style=flat-square" alt="status" /> |
 | [grafana/grafana](https://github.com/grafana/grafana) | [#137544](https://github.com/grafana/grafana/pull/137544) BarGaugePanel: Scale bars using counter deltas | <img src="https://img.shields.io/github/pulls/detail/state/grafana/grafana/137544?label=&style=flat-square" alt="status" /> |
 | [node-influx/node-influx](https://github.com/node-influx/node-influx) | [#789](https://github.com/node-influx/node-influx/pull/789) Fix ping requests with configured base paths | <img src="https://img.shields.io/github/pulls/detail/state/node-influx/node-influx/789?label=&style=flat-square" alt="status" /> |
 | [node-influx/node-influx](https://github.com/node-influx/node-influx) | [#790](https://github.com/node-influx/node-influx/pull/790) Support shard group duration in retention policies | <img src="https://img.shields.io/github/pulls/detail/state/node-influx/node-influx/790?label=&style=flat-square" alt="status" /> |
+| [eclipse-basyx/basyx-aas-web-ui](https://github.com/eclipse-basyx/basyx-aas-web-ui) | [#1588](https://github.com/eclipse-basyx/basyx-aas-web-ui/pull/1588) Fix bank account deletion in Company Data Portal | <img src="https://img.shields.io/github/pulls/detail/state/eclipse-basyx/basyx-aas-web-ui/1588?label=&style=flat-square" alt="status" /> |
+| [eclipse-basyx/basyx-aas-web-ui](https://github.com/eclipse-basyx/basyx-aas-web-ui) | [#1589](https://github.com/eclipse-basyx/basyx-aas-web-ui/pull/1589) Improve guidance for BaSyx connection failures | <img src="https://img.shields.io/github/pulls/detail/state/eclipse-basyx/basyx-aas-web-ui/1589?label=&style=flat-square" alt="status" /> |
+| [eclipse-basyx/basyx-aas-web-ui](https://github.com/eclipse-basyx/basyx-aas-web-ui) | [#1590](https://github.com/eclipse-basyx/basyx-aas-web-ui/pull/1590) Prefer configured endpoint in multi-endpoint AAS descriptors | <img src="https://img.shields.io/github/pulls/detail/state/eclipse-basyx/basyx-aas-web-ui/1590?label=&style=flat-square" alt="status" /> |
+
+<sub>Last updated: 2026-11-15 (auto)</sub>
+<!-- OSS:END -->
 
 <img width="100%" src="https://capsule-render.vercel.app/api?type=rect&color=0:22C55E,100:065F46&height=2" />
 

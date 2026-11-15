@@ -1,82 +1,26 @@
-name: Update open-source contributions
+name: Update OSS contributions
 
 on:
   schedule:
-    - cron: '17 21 * * *' # 매일 06:17 KST
+    - cron: "0 0 * * *"   # 매일 09:00 KST
   workflow_dispatch:
 
 permissions:
   contents: write
-
-concurrency:
-  group: update-oss
-  cancel-in-progress: false
 
 jobs:
   update:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-
-      - name: Rebuild contributions table
-        uses: actions/github-script@v7
+      - uses: actions/setup-node@v4
         with:
-          script: |
-            const fs = require('fs');
-            const USER = 'HanJaemin-kr';
-            const EXCLUDE_ORGS = ['Team-MeU', 'FocuStudy', 'uiai-lab', 'Ulsan-Industrial-AI-Lab'];
-            const q = ['author:' + USER, 'type:pr', '-user:' + USER, ...EXCLUDE_ORGS.map(o => '-org:' + o)].join(' ');
-            const items = await github.paginate('GET /search/issues', { q, per_page: 100, sort: 'created', order: 'desc' });
-            const prs = items
-              .map(i => ({
-                repo: i.repository_url.split('/repos/')[1],
-                number: i.number,
-                title: i.title,
-                url: i.html_url,
-                merged: Boolean(i.pull_request && i.pull_request.merged_at),
-                open: i.state === 'open',
-              }))
-              .filter(p => p.open || p.merged);
-            if (prs.length === 0) { core.info('No PRs found. Skipping.'); return; }
-            const repos = [...new Set(prs.map(p => p.repo))];
-            const stars = {};
-            for (const r of repos) {
-              const [owner, repo] = r.split('/');
-              try { stars[r] = (await github.rest.repos.get({ owner, repo })).data.stargazers_count; } catch (e) { stars[r] = 0; }
-            }
-            const mergedCount = r => prs.filter(p => p.repo === r && p.merged).length;
-            repos.sort((a, b) => mergedCount(b) - mergedCount(a) || stars[b] - stars[a] || a.localeCompare(b));
-            const esc = s => s.replace(/\|/g, '\\|').replace(/</g, '&lt;');
-            const rows = [];
-            for (const r of repos) {
-              for (const p of prs.filter(x => x.repo === r).sort((a, b) => a.number - b.number)) {
-                rows.push('| [' + r + '](https://github.com/' + r + ') | [#' + p.number + '](' + p.url + ') ' + esc(p.title) + ' | <img src="https://img.shields.io/github/pulls/detail/state/' + r + '/' + p.number + '?label=&style=flat-square" alt="status" /> |');
-              }
-            }
-            const table = ['| Project | Pull Request | Status |', '|---|---|---|', ...rows].join('\n');
-            const START = '<!-- OSS:START -->';
-            const END = '<!-- OSS:END -->';
-            const original = fs.readFileSync('README.md', 'utf8');
-            let md = original;
-            if (!md.includes(START)) {
-              const m = md.match(/^\| Project \| Pull Request \| Status \|\n(?:\|.*(?:\n|$))*/m);
-              if (!m) { core.setFailed('Contributions table not found in README.md'); return; }
-              md = md.replace(m[0], START + '\n' + m[0].trimEnd() + '\n' + END + '\n');
-            }
-            const s = md.indexOf(START);
-            const e = md.indexOf(END);
-            md = md.slice(0, s) + START + '\n\n' + table + '\n\n' + md.slice(e);
-            if (md !== original) { fs.writeFileSync('README.md', md); core.info('README updated: ' + rows.length + ' PRs'); }
-            else { core.info('No changes: ' + rows.length + ' PRs'); }
-
-      - name: Commit if changed
-        run: |
-          if git diff --quiet README.md; then
-            echo "No changes"
-            exit 0
-          fi
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add README.md
-          git commit -m "chore: update open-source contributions"
-          git push
+          node-version: 20
+      - run: node scripts/update-oss.mjs
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_USER: ${{ github.repository_owner }}
+      - uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chore: update OSS contributions [skip ci]"
+          file_pattern: README.md
