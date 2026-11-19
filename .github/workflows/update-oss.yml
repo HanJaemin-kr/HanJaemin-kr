@@ -2,8 +2,12 @@ name: Update OSS contributions
 
 on:
   schedule:
-    - cron: "0 0 * * *"   # 매일 09:00 KST
+    - cron: "7,37 * * * *"  # 30분마다 (GitHub 스케줄 지연 가능)
   workflow_dispatch:
+
+concurrency:
+  group: profile-readme-update
+  cancel-in-progress: false
 
 permissions:
   contents: write
@@ -11,6 +15,7 @@ permissions:
 jobs:
   update:
     runs-on: ubuntu-latest
+    timeout-minutes: 5
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -22,5 +27,5 @@ jobs:
           GH_USER: ${{ github.repository_owner }}
       - uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "chore: update OSS contributions [skip ci]"
+          commit_message: "chore: refresh profile README [skip ci]"
           file_pattern: README.md

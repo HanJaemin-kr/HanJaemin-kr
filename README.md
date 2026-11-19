@@ -55,21 +55,37 @@ education: "M.S. in EECS, University of Ulsan (GPA 4.19 / 4.5)"
 현업에서 쓰는 도구(Grafana, InfluxDB 클라이언트, Industry 4.0 디지털 트윈 표준 AAS/BaSyx)의 버그와 기능을 직접 고쳐 업스트림에 기여하고 있습니다.
 
 <!-- OSS:START -->
-![PRs](https://img.shields.io/badge/PRs-6-22C55E?style=flat-square) ![Merged](https://img.shields.io/badge/Merged-2-16A34A?style=flat-square) ![Repos](https://img.shields.io/badge/Repos-3-065F46?style=flat-square)
+![PRs](https://img.shields.io/badge/PRs-8-22C55E?style=flat-square) ![Merged](https://img.shields.io/badge/Merged-3-16A34A?style=flat-square) ![Repos](https://img.shields.io/badge/Repos-5-065F46?style=flat-square)
 
 | Project | Pull Request | Status |
 |---|---|---|
-| [grafana/grafana](https://github.com/grafana/grafana) | [#137544](https://github.com/grafana/grafana/pull/137544) BarGaugePanel: Scale bars using counter deltas | <img src="https://img.shields.io/github/pulls/detail/state/grafana/grafana/137544?label=&style=flat-square" alt="status" /> |
-| [node-influx/node-influx](https://github.com/node-influx/node-influx) | [#789](https://github.com/node-influx/node-influx/pull/789) Fix ping requests with configured base paths | <img src="https://img.shields.io/github/pulls/detail/state/node-influx/node-influx/789?label=&style=flat-square" alt="status" /> |
-| [node-influx/node-influx](https://github.com/node-influx/node-influx) | [#790](https://github.com/node-influx/node-influx/pull/790) Support shard group duration in retention policies | <img src="https://img.shields.io/github/pulls/detail/state/node-influx/node-influx/790?label=&style=flat-square" alt="status" /> |
-| [eclipse-basyx/basyx-aas-web-ui](https://github.com/eclipse-basyx/basyx-aas-web-ui) | [#1588](https://github.com/eclipse-basyx/basyx-aas-web-ui/pull/1588) Fix bank account deletion in Company Data Portal | <img src="https://img.shields.io/github/pulls/detail/state/eclipse-basyx/basyx-aas-web-ui/1588?label=&style=flat-square" alt="status" /> |
-| [eclipse-basyx/basyx-aas-web-ui](https://github.com/eclipse-basyx/basyx-aas-web-ui) | [#1589](https://github.com/eclipse-basyx/basyx-aas-web-ui/pull/1589) Improve guidance for BaSyx connection failures | <img src="https://img.shields.io/github/pulls/detail/state/eclipse-basyx/basyx-aas-web-ui/1589?label=&style=flat-square" alt="status" /> |
-| [eclipse-basyx/basyx-aas-web-ui](https://github.com/eclipse-basyx/basyx-aas-web-ui) | [#1590](https://github.com/eclipse-basyx/basyx-aas-web-ui/pull/1590) Prefer configured endpoint in multi-endpoint AAS descriptors | <img src="https://img.shields.io/github/pulls/detail/state/eclipse-basyx/basyx-aas-web-ui/1590?label=&style=flat-square" alt="status" /> |
+| [tradingview/lightweight-charts](https://github.com/tradingview/lightweight-charts) | [#2222](https://github.com/tradingview/lightweight-charts/pull/2222) Fix overlapping primitive time-axis labels | Open |
+| [grafana/plugin-tools](https://github.com/grafana/plugin-tools) | [#3116](https://github.com/grafana/plugin-tools/pull/3116) fix(create-plugin): use production React transform in rspack dev builds | Merged |
+| [eclipse-basyx/basyx-aas-web-ui](https://github.com/eclipse-basyx/basyx-aas-web-ui) | [#1590](https://github.com/eclipse-basyx/basyx-aas-web-ui/pull/1590) Prefer configured endpoint in multi-endpoint AAS descriptors | Open |
+| [eclipse-basyx/basyx-aas-web-ui](https://github.com/eclipse-basyx/basyx-aas-web-ui) | [#1589](https://github.com/eclipse-basyx/basyx-aas-web-ui/pull/1589) Improve guidance for BaSyx connection failures | Merged |
+| [eclipse-basyx/basyx-aas-web-ui](https://github.com/eclipse-basyx/basyx-aas-web-ui) | [#1588](https://github.com/eclipse-basyx/basyx-aas-web-ui/pull/1588) Fix bank account deletion in Company Data Portal | Merged |
+| [node-influx/node-influx](https://github.com/node-influx/node-influx) | [#790](https://github.com/node-influx/node-influx/pull/790) Support shard group duration in retention policies | Open |
+| [node-influx/node-influx](https://github.com/node-influx/node-influx) | [#789](https://github.com/node-influx/node-influx/pull/789) Fix ping requests with configured base paths | Open |
+| [grafana/grafana](https://github.com/grafana/grafana) | [#137544](https://github.com/grafana/grafana/pull/137544) BarGaugePanel: Scale bars using counter deltas | Open |
 
-<sub>Last updated: 2026-11-15 (auto)</sub>
+[GitHub에서 최신 공개 PR 보기](https://github.com/search?type=pullrequests&s=created&o=desc&q=is%3Apublic%20is%3Apr%20author%3AHanJaemin-kr%20-user%3AHanJaemin-kr%20-org%3ATeam-MeU%20-org%3AFocuStudy%20-org%3Auiai-lab%20-org%3AUlsan-Industrial-AI-Lab%20archived%3Afalse)
 <!-- OSS:END -->
 
 <img width="100%" src="https://capsule-render.vercel.app/api?type=rect&color=0:22C55E,100:065F46&height=2" />
+
+## Public Projects
+
+<!-- PUBLIC-REPOS:START -->
+개인 계정에서 공개한 원본 저장소를 생성일 순으로 표시합니다. 포크와 아카이브는 제외합니다.
+
+| Project | Description |
+|---|---|
+| [Industrial-AI](https://github.com/HanJaemin-kr/Industrial-AI) | Industrial-AI |
+| [Study_Projects](https://github.com/HanJaemin-kr/Study_Projects) | Study&#95;Projects |
+| [StylishCode](https://github.com/HanJaemin-kr/StylishCode) | Storage created to master coding |
+
+[GitHub에서 최신 공개 저장소 보기](https://github.com/HanJaemin-kr?tab=repositories&type=source&sort=created)
+<!-- PUBLIC-REPOS:END -->
 
 ## Featured Projects
 
